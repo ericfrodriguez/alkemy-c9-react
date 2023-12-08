@@ -1,20 +1,22 @@
+import '../styles/Saludo.css';
 
 function Saludo() {
 
     const nombre = 'Eric';
     const isActive = true;
 
-    const estilo = {
-        color: isActive ? 'green' : 'red',
-        fontSize: isActive ? '24px' : '16px',
-        fontWeight: isActive ? 'bold' : '400'
-    }
+    // const estilo = {
+    //     color: isActive ? 'green' : 'red',
+    //     fontSize: isActive ? '24px' : '16px',
+    //     fontWeight: isActive ? 'bold' : '400'
+    // }
+
+    // Logica para renderizar
 
     return (
-        <div>
-            <h1>Esto es un titulo</h1>
-            <img src="" alt="" />
-            <p style={estilo} className={isActive ? 'bg-blue' : 'bg-red'}>Hola {nombre}!</p>
+        <div className="saludo-container">
+            <h1 className="saludo-title">Esto es un titulo</h1>
+            <p  className={isActive ? 'bg-blue' : 'bg-red'}>Hola {nombre}!</p>
             <div />
         </div>
     )
