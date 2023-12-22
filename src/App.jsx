@@ -8,6 +8,9 @@ import Register from './components/Register.jsx';
 import Contador from './components/Contador.jsx';
 import Contenedor from './components/Contenedor.jsx';
 import UserProvider from './context/UserProvider.jsx';
+import MyAppBar from './components/MyAppBar.jsx';
+import ListaProductos from './components/ListaProductos.jsx';
+
 
 function App() {
   const [mostrar, setMostrar] = useState(true);
@@ -17,19 +20,26 @@ function App() {
 
   return (
     <UserProvider>
-      <Header tituloProp={titulo} />
       {/* {
         mostrar ? <Contador /> : <p>Contador oculto</p>
       } */}
-      <Contenedor>
-        <Register />
-        {/* <Contador /> */}
-      </Contenedor> 
+      <MyAppBar />
+      <div style={{
+        minHeight: '100vh',
+        padding: '20px'
+      }}>
 
+        <ListaProductos />
+
+      </div>
       {/* <button onClick={() => setMostrar(true)}>Mostrar</button>
         <button onClick={() => setMostrar(false)}>Ocultar</button> */}
       {/* <Saludo /> */}
+      {/* <Contenedor>
+      </Contenedor> */}
+      {/* <Register /> */}
       <Footer />
+      {/* <Contador /> */}
       {/* <Header titulo='Titulo para el Blog'/> */}
     </UserProvider>
   )

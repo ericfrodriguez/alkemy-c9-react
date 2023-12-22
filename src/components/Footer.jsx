@@ -1,8 +1,11 @@
-import '../styles/Footer.css'
+import { Box, Typography } from '@mui/material';
+
 
 function Footer() {
     return (
-        <footer>Este es el pie de página de la aplicación</footer>
+        <Box sx={{ flexGrow: 1, height: 60, bgcolor: 'lightBlue',}}>
+            <Typography variant='body1'>Derechos Reservados Alkemy</Typography>
+        </Box>
     )
 }
 
